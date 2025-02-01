@@ -16,6 +16,7 @@ import { sanityFetch } from "@/sanity/lib/fetch";
 import { postQuery, settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -101,6 +102,7 @@ export default async function PostPage({ params }: Props) {
             value={post.content as PortableTextBlock[]}
           />
         )}
+        
       </article>
       <aside>
         <hr className="border-accent-2 mb-24 mt-28" />
@@ -111,6 +113,7 @@ export default async function PostPage({ params }: Props) {
           <MoreStories skip={post._id} limit={2} />
         </Suspense>
       </aside>
+      
     </div>
   );
 }

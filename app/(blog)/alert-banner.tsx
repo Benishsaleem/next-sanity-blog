@@ -1,32 +1,21 @@
-//"use client";
-
-//import { useRouter } from "next/navigation";
-//import { useSyncExternalStore, useTransition } from "react";
-
-
-
-//const emptySubscribe = () => () => {};
+import Link from "next/link";
 
 export default function AlertBanner() {
- // const router = useRouter();
- // const [pending, startTransition] = useTransition();
-
- // const shouldShow = useSyncExternalStore(
-//    emptySubscribe,
-  //  () => window.top === window,
- //   () => false,
-//  );
-
-//  if (!shouldShow) return null;
+ 
 
   return (
     <div
-      className="fixed top-0 left-0 z-50 w-full border-b bg-white/95 text-black backdrop-blur"
+      className="flex bg-orange-600 text-black font-bold justify-between h-14 px-4 pt-4 left-0 z-50 w-full border-b   backdrop-blur"
     >
     
-      <div className="py-2 text-center text-sm">
-       Blogs
+      <div className="text-center text-sm font-extrabold">
+       BLOGS
     </div>
+    <nav className="flex font-bold space-x-6 text-sm">
+      <Link href="/" className="hover:text-white">Home</Link>
+      <Link href="about" className="hover:text-white">About</Link>
+      <Link href="contact" className="hover:text-white">Contact</Link>
+    </nav>
     </div>
   );
 }
